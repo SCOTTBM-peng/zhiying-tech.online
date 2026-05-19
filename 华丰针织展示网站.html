@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华丰针织 - 专业针织服装OEM/ODM工厂 | Huafeng Knitwear</title>
+    <meta name="description" content="华丰针织：20年专业针织服装制造，毛衣、针织衫、T恤、运动服OEM/ODM，出口欧洲、北美、澳洲，提供FOB/CIF全方位服务。欢迎全球采购商联系。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #1a1a2e;
+            background: #f8f9fa;
+            line-height: 1.6;
+        }
+        /* Nav */
+        nav {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            padding: 16px 48px;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid #e8e8e8;
+        }
+        nav .logo { font-size: 1.5rem; font-weight: 700; color: #1a1a2e; }
+        nav .logo span { color: #e94560; }
+        nav a { margin-left: 24px; text-decoration: none; color: #555; font-size: 0.95rem; transition: color .2s; }
+        nav a:hover { color: #e94560; }
+        /* Sections */
+        section { padding: 100px 48px; max-width: 1200px; margin: 0 auto; }
+        .hero {
+            min-height: 100vh; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; text-align: center;
+            padding: 120px 24px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+        }
+        .hero h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 20px; }
+        .hero h1 span { color: #e94560; }
+        .hero p { font-size: 1.2rem; max-width: 600px; color: #b0b8d4; margin-bottom: 40px; }
+        .hero .btn {
+            display: inline-block; padding: 14px 48px; border-radius: 50px;
+            background: #e94560; color: white; text-decoration: none;
+            font-weight: 600; font-size: 1.05rem; transition: transform .2s, box-shadow .2s;
+        }
+        .hero .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(233,69,96,0.3); }
+        .hero .contact-strip {
+            margin-top: 40px; display: flex; gap: 40px; flex-wrap: wrap; justify-content: center;
+        }
+        .hero .contact-strip a {
+            color: #b0b8d4; text-decoration: none; font-size: 0.95rem;
+            display: flex; align-items: center; gap: 8px; transition: color .2s;
+        }
+        .hero .contact-strip a:hover { color: #e94560; }
+        .section-title {
+            font-size: 2.2rem; font-weight: 700; margin-bottom: 12px;
+            text-align: center; color: #1a1a2e;
+        }
+        .section-sub { text-align: center; color: #888; margin-bottom: 60px; font-size: 1.05rem; }
+        /* About */
+        .about-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+        }
+        .about-grid .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .about-grid .stat-card {
+            background: white; padding: 28px; border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center;
+        }
+        .about-grid .stat-card .num { font-size: 2rem; font-weight: 800; color: #e94560; }
+        .about-grid .stat-card .label { color: #888; font-size: 0.9rem; margin-top: 4px; }
+        .about-text p { margin-bottom: 16px; color: #555; }
+        /* Products */
+        .products-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px;
+        }
+        .product-card {
+            background: white; border-radius: 16px; overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06); transition: transform .2s;
+        }
+        .product-card:hover { transform: translateY(-4px); }
+        .product-card .color-bar { height: 6px; }
+        .product-card .body { padding: 24px; }
+        .product-card h3 { font-size: 1.1rem; margin-bottom: 8px; }
+        .product-card p { font-size: 0.9rem; color: #666; }
+        /* Capabilities */
+        .caps-grid {
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;
+        }
+        .cap-card {
+            background: white; border-radius: 16px; padding: 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .cap-card h3 { margin-bottom: 12px; color: #1a1a2e; }
+        .cap-card ul { list-style: none; }
+        .cap-card ul li { padding: 6px 0; color: #666; font-size: 0.9rem; }
+        .cap-card ul li::before { content: "✓ "; color: #e94560; font-weight: 700; }
+        /* Cert */
+        .cert-list {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 40px;
+        }
+        .cert-badge {
+            background: white; padding: 20px 32px; border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06); font-weight: 600; font-size: 0.95rem;
+            display: flex; align-items: center; gap: 8px;
+        }
+        /* Contact */
+        .contact-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white; padding: 100px 48px;
+        }
+        .contact-section .section-title { color: white; }
+        .contact-section .section-sub { color: #8899bb; }
+        .contact-cards {
+            max-width: 800px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+        }
+        .contact-card {
+            background: rgba(255,255,255,0.08); backdrop-filter: blur(10px);
+            padding: 28px; border-radius: 16px; text-align: center;
+        }
+        .contact-card h3 { margin-bottom: 8px; font-size: 1rem; color: #e94560; }
+        .contact-card p { color: #b0b8d4; font-size: 1.1rem; }
+        .contact-card a { color: white; text-decoration: none; }
+        .contact-card a:hover { color: #e94560; }
+        .contact-card .wa-link {
+            display: inline-block; margin-top: 12px;
+            padding: 10px 28px; border-radius: 50px;
+            background: #25D366; color: white; font-weight: 600;
+            text-decoration: none; font-size: 0.9rem; transition: opacity .2s;
+        }
+        .contact-card .wa-link:hover { opacity: 0.9; color: white; }
+        /* Footer */
+        footer {
+            text-align: center; padding: 40px; color: #888; font-size: 0.85rem;
+            background: #f0f0f0;
+        }
+        @media (max-width: 768px) {
+            nav { padding: 16px 20px; }
+            .hero h1 { font-size: 2.2rem; }
+            section { padding: 60px 20px; }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-cards { grid-template-columns: 1fr; }
+        }
+        .whatsapp-float {
+            position: fixed; bottom: 24px; right: 24px; z-index: 99;
+            width: 56px; height: 56px; border-radius: 50%;
+            background: #25D366; color: white; display: flex; align-items: center;
+            justify-content: center; font-size: 28px; text-decoration: none;
+            box-shadow: 0 4px 16px rgba(37,211,102,0.3); transition: transform .2s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Huafeng<span>Knit</span></div>
+        <div>
+            <a href="#about">关于我们</a>
+            <a href="#products">产品</a>
+            <a href="#capabilities">产能</a>
+            <a href="#contact">联系</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h1>专业针织服装<span>制造</span>商</h1>
+        <p>20年经验 · 出口全球30+国家 · 专注针织OEM/ODM。从设计到出货，一站式解决。</p>
+        <a href="#contact" class="btn">📩 获取报价</a>
+        <div class="contact-strip">
+            <a href="mailto:sales@huafengknit.com">✉️ sales@huafengknit.com</a>
+            <a href="https://wa.me/8618628123456" target="_blank">💬 WhatsApp: +86 186-2812-3456</a>
+            <a>📞 +86 757-2888-6666</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2 class="section-title">关于华丰针织</h2>
+        <p class="section-sub">扎根中国针织名镇·佛山张槎，服务全球采购商</p>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>华丰针织成立于2005年，坐落于广东佛山张槎——中国最大的针织产业集群地。我们是一家集织造、染整、缝制为一体的全链条针织服装制造商。</p>
+                <p>工厂总占地面积8000㎡，员工380人，年生产能力超过300万件。我们服务过欧美、日韩、中东、南美、澳洲等30多个国家和地区的品牌客户，包括大型零售商、独立品牌和跨境电商卖家。</p>
+                <p>我们深知海外采购商的痛点：质量稳定、交期准时、沟通高效。从打版到大货，我们提供全程无缝对接。</p>
+            </div>
+            <div class="stats">
+                <div class="stat-card"><div class="num">2005</div><div class="label">成立年份</div></div>
+                <div class="stat-card"><div class="num">300万+</div><div class="label">年产(件)</div></div>
+                <div class="stat-card"><div class="num">30+</div><div class="label">出口国家</div></div>
+                <div class="stat-card"><div class="num">380</div><div class="label">专业员工</div></div>
+            </div>
+        </div>
+        <div class="cert-list">
+            <div class="cert-badge">✓ BSCI 社会责任审核</div>
+            <div class="cert-badge">✓ OEKO-TEX® Standard 100</div>
+            <div class="cert-badge">✓ ISO 9001:2015</div>
+            <div class="cert-badge">✓ SGS 品质检测报告</div>
+            <div class="cert-badge">✓ FTA 原产地证书</div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" style="background: #f0f2f5; max-width: 100%; padding: 100px 48px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title">主要产品</h2>
+            <p class="section-sub">覆盖全品类针织服装，满足不同市场需求</p>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="color-bar" style="background:#e94560;"></div>
+                    <div class="body">
+                        <h3>🧶 毛衣 / 毛衫</h3>
+                        <p>棉、羊毛、羊绒、混纺、腈纶<br>3G/5G/7G/12G/14G针织横机<br>平纹/罗纹/提花/绞花</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="color-bar" style="background:#0f3460;"></div>
+                    <div class="body">
+                        <h3>👕 T恤 / 卫衣</h3>
+                        <p>圆领T恤、Polo衫、卫衣、帽衫<br>单面/双面/抓绒/空气层<br>180-320g/m²</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="color-bar" style="background:#533483;"></div>
+                    <div class="body">
+                        <h3>🏃 运动针织</h3>
+                        <p>运动套装、瑜伽服、速干衣<br>吸湿排汗功能性面料<br>无缝针织技术</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="color-bar" style="background:#e67e22;"></div>
+                    <div class="body">
+                        <h3>🧣 针织配饰</h3>
+                        <p>围巾、帽子、手套、袜子<br>提花/印花/刺绣<br>圣诞系列/节日定制</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="color-bar" style="background:#27ae60;"></div>
+                    <div class="body">
+                        <h3>👗 针织连衣裙</h3>
+                        <p>针织连衣裙、半身裙、套装<br>蕾丝拼接/镂空设计<br>适合欧美快时尚</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="color-bar" style="background:#e74c3c;"></div>
+                    <div class="body">
+                        <h3>👶 童装针织</h3>
+                        <p>婴幼儿连体衣、童装T恤<br>AATCC美标检测<br>环保无甲醛染料</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section id="capabilities">
+        <h2 class="section-title">工厂实力</h2>
+        <p class="section-sub">从原料到成品，全产业链控制</p>
+        <div class="caps-grid">
+            <div class="cap-card">
+                <h3>🧵 生产设备</h3>
+                <ul>
+                    <li>日本岛精(SHIMA SEIKI)电脑横机 60台</li>
+                    <li>国产龙星电脑横机 40台（3G-14G）</li>
+                    <li>自动裁剪机 8台</li>
+                    <li>缝盘机/锁眼机 120台</li>
+                    <li>整烫定型线 4条</li>
+                </ul>
+            </div>
+            <div class="cap-card">
+                <h3>📋 品质控制</h3>
+                <ul>
+                    <li>4道质检流程（原料→半成品→成衣→出货）</li>
+                    <li>缩水率/色牢度/起球测试实验室</li>
+                    <li>AQL 2.5 国际抽检标准</li>
+                    <li>可按客户要求安排SGS/Intertek验货</li>
+                    <li>出货前100%尺寸&工艺核对</li>
+                </ul>
+            </div>
+            <div class="cap-card">
+                <h3>🚢 贸易服务</h3>
+                <ul>
+                    <li>MOQ: 300件/款（可协商）</li>
+                    <li>打样周期: 7-12天</li>
+                    <li>大货周期: 30-45天（根据订单量）</li>
+                    <li>FOB深圳/广州，CIF全球主要港口</li>
+                    <li>L/C, T/T, PayPal, 贸易保证</li>
+                    <li>提供出口单证、产地证、商检</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section" style="max-width:100%;">
+        <h2 class="section-title">联系华丰针织</h2>
+        <p class="section-sub">24小时内回复，免费寄样</p>
+        <div class="contact-cards">
+            <div class="contact-card">
+                <h3>✉️ 邮箱</h3>
+                <p><a href="mailto:sales@huafengknit.com">sales@huafengknit.com</a></p>
+                <p style="margin-top:4px;font-size:0.85rem;color:#667799;">（推荐，24h内回复）</p>
+            </div>
+            <div class="contact-card">
+                <h3>💬 WhatsApp</h3>
+                <p>+86 186-2812-3456</p>
+                <a href="https://wa.me/8618628123456" target="_blank" class="wa-link">在WhatsApp上聊天</a>
+            </div>
+            <div class="contact-card">
+                <h3>📍 工厂地址</h3>
+                <p>广东省佛山市禅城区张槎一路88号<br>华丰针织工业园</p>
+            </div>
+            <div class="contact-card">
+                <h3>📱 联系人</h3>
+                <p>张明远（业务经理）</p>
+                <p style="margin-top:4px;font-size:0.85rem;color:#667799;">中文 / English 均可</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2005-2026 佛山市华丰针织有限公司 | Huafeng Knitwear Co., Ltd.</p>
+        <p style="margin-top:8px;">All Rights Reserved. 粤ICP备xxxxxxxx号</p>
+    </footer>
+
+    <a href="https://wa.me/8618628123456" target="_blank" class="whatsapp-float">
+        💬
+    </a>
+</body>
+</html>
